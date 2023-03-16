@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPT", "PPT\PPT.csproj", "{498947C6-772C-48A5-B2D1-6695EDF202E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PPT Test", "PPT Test\PPT Test.csproj", "{2915365D-2BBF-4A63-AE3D-459A4636E6C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{498947C6-772C-48A5-B2D1-6695EDF202E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{498947C6-772C-48A5-B2D1-6695EDF202E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{498947C6-772C-48A5-B2D1-6695EDF202E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{498947C6-772C-48A5-B2D1-6695EDF202E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2915365D-2BBF-4A63-AE3D-459A4636E6C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2915365D-2BBF-4A63-AE3D-459A4636E6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2915365D-2BBF-4A63-AE3D-459A4636E6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2915365D-2BBF-4A63-AE3D-459A4636E6C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78A36E38-0518-4142-929E-32D9268A5924}
+	EndGlobalSection
+EndGlobal
