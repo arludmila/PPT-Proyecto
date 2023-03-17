@@ -1,64 +1,97 @@
 using PPT;
+using Xunit.Abstractions;
 
 namespace PPT_Test {
-    public class UnitTest1 {
-        // CASO EMPATE
-        [Fact]
-        public void Empate()
+    public class XUnitTestClass {
+        // https://www.jetbrains.com/help/resharper/Xunit.XunitTestWithConsoleOutput.html
+        private readonly ITestOutputHelper _testOutputHelper;
+        public XUnitTestClass(ITestOutputHelper testOutputHelper)
         {
-            var piedra1 = new Piedra();
-            var piedra2 = new Piedra();
-            var resultado = piedra1.GanaContra(piedra2);
-            Assert.Equal("Empate!",resultado);
+            _testOutputHelper = testOutputHelper;
         }
-        // CASO PIERDE C/U
+        // ----------------------------
+        // CASO EMPATE ----------------------------
+        [Fact]
+        public void EmpatePiedra()
+        {
+            var a = new Piedra();
+            var b = new Piedra();
+            var resultado = a.GanaContra(b);
+            _testOutputHelper.WriteLine(resultado);
+            Assert.Equal(a.Tipo + " empato contra " + b.Tipo,resultado);
+        }
+        [Fact]
+        public void EmpateTijera()
+        {
+            var a = new Tijera();
+            var b = new Tijera();
+            var resultado = a.GanaContra(b);
+            _testOutputHelper.WriteLine(resultado);
+            Assert.Equal(a.Tipo + " empato contra " + b.Tipo, resultado);
+        }
+        [Fact]
+        public void EmpatePapel()
+        {
+            var a = new Papel();
+            var b = new Papel();
+            var resultado = a.GanaContra(b);
+            _testOutputHelper.WriteLine(resultado);
+            Assert.Equal(a.Tipo + " empato contra " + b.Tipo, resultado);
+        }
+        // CASO PIERDE C/U ----------------------------
         [Fact] 
-        public void PierdeTijera() { 
-            var piedra = new Piedra();
-            var tijera = new Tijera();
-            var resultado = tijera.GanaContra(piedra);
-            Assert.Equal("Pierde!", resultado);
+        public void PierdeTijera() {
+            var a = new Tijera();
+            var b = new Piedra();
+            var resultado = a.GanaContra(b);
+            _testOutputHelper.WriteLine(resultado);
+            Assert.Equal(a.Tipo + " perdio contra " + b.Tipo, resultado);
         }
         [Fact]
         public void PierdePapel()
         {
-            var tijera = new Tijera();
-            var papel = new Papel();
-            var resultado = papel.GanaContra(tijera);
-            Assert.Equal("Pierde!", resultado);
+            var a = new Papel();
+            var b = new Tijera();
+            var resultado = a.GanaContra(b);
+            _testOutputHelper.WriteLine(resultado);
+            Assert.Equal(a.Tipo + " perdio contra " + b.Tipo, resultado);
         }
         [Fact]
         public void PierdePiedra()
         {
-            var piedra = new Piedra();
-            var papel = new Papel();
-            var resultado = piedra.GanaContra(papel);
-            Assert.Equal("Pierde!", resultado);
+            var a = new Piedra();
+            var b = new Papel();
+            var resultado = a.GanaContra(b);
+            _testOutputHelper.WriteLine(resultado);
+            Assert.Equal(a.Tipo + " perdio contra " + b.Tipo, resultado);
         }
-        // CASO GANA C/U
+        // CASO GANA C/U ----------------------------
         [Fact]
         public void GanaPiedra()
         {
-            var piedra = new Piedra();
-            var tijera = new Tijera();
-            var resultado = piedra.GanaContra(tijera);
-            Assert.Equal("Gano!", resultado);
+            var a = new Piedra();
+            var b = new Tijera();
+            var resultado = a.GanaContra(b);
+            _testOutputHelper.WriteLine(resultado);
+            Assert.Equal(a.Tipo + " gano contra " + b.Tipo, resultado);
         }
         [Fact]
         public void GanaTijera()
         {
-            var tijera = new Tijera();
-            var papel = new Papel();
-            var resultado = tijera.GanaContra(papel);
-            Assert.Equal("Gano!", resultado);
+            var a = new Tijera();
+            var b = new Papel();
+            var resultado = a.GanaContra(b);
+            _testOutputHelper.WriteLine(resultado);
+            Assert.Equal(a.Tipo + " gano contra " + b.Tipo, resultado);
         }
         [Fact]
         public void GanaPapel()
         {
-            var piedra = new Piedra();
-            var papel = new Papel();
-            var resultado = papel.GanaContra(piedra);
-            Assert.Equal("Gano!", resultado);
+            var a = new Papel();
+            var b = new Piedra();
+            var resultado = a.GanaContra(b);
+            _testOutputHelper.WriteLine(resultado);
+            Assert.Equal(a.Tipo + " gano contra " + b.Tipo, resultado);
         }
 
     }
