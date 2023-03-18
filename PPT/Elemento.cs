@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace PPT {
     public class Elemento {
-        public Elemento(){}
+        public Elemento(string tipo)
+        {
+            Tipo = tipo;
+        }
+
         public string Tipo { get; set; }
         public string GanaContra(Elemento e){
             if (this.Tipo.Equals(e.Tipo)){
