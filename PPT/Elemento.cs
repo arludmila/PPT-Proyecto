@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace PPT {
     public class Elemento {
         public string Tipo { get; set; }
+
         public string GanaContra(Elemento e){
             if (this.Tipo.Equals(e.Tipo)){
                 Debug.WriteLine(this.Tipo + " empato contra " + e.Tipo);
